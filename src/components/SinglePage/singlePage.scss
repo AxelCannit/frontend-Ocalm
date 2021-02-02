@@ -1,0 +1,91 @@
+@import 'src/styles/vars';
+
+.single-page {
+
+  .single-media {
+    
+    .player {
+      margin: auto;
+
+    }
+
+  }
+
+  .media-infos {
+    border-radius: 80% 20% 74% 26% / 39% 53% 47% 61% ;
+    background: linear-gradient(41deg, rgba(213,235,234,1) 0%, rgba(213,235,234,1) 61%, rgba(145,213,211,1) 79%);
+    text-align: center;
+    margin-top: 0.5rem;
+    padding-top: 8rem;
+
+    .fav {
+      margin-right: 32rem;
+      margin-top: 5rem;
+      position: absolute;
+      z-index: 2;
+      color: $redIsDead;
+      fill: white;
+      
+      &.fav--is-favorite {
+        fill: $redIsDead;
+      }
+  
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .title {
+      font-size: 1.5rem;
+      color: $darkBlue;
+      font-weight: bold;
+
+    }
+
+    .author {
+      margin-top: 0.5rem;
+      color: $darkerBlue;
+      font-weight: bold;
+
+    }
+
+    .description {
+      color: $mainColor;
+      text-align: justify;
+      margin: 2rem;
+      margin-right: 2.5rem;
+      
+    }
+  }
+
+}
+
+@media screen and (min-width: 1200px) {
+  .single-page {
+    display: flex;
+    justify-content: space-evenly;
+
+    .single-media {
+
+      .player {
+        margin: 1rem;
+      }
+    }
+
+    .media-infos {
+      width: 45%;
+      .description {
+        text-align: right;
+
+      }
+    }
+
+    .fav {
+      position: absolute;
+      right: 0;
+      margin-top: 30rem;
+      margin-right: 1rem;
+
+    }
+  }
+}

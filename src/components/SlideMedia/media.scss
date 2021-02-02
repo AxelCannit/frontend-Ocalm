@@ -1,0 +1,71 @@
+@import 'src/styles/vars';
+
+.media {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  width: 200px;
+
+  .fav {
+    margin-left: 11.5rem;
+    margin-top: -0.5rem;
+    position: absolute;
+    z-index: 2;
+    color: $redIsDead;
+    fill: white;
+    
+    &.fav--is-favorite {
+      fill: $redIsDead;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  
+  .react-player {
+    margin-bottom: 0.5rem;
+  }
+
+  .play {
+    display: block;
+    margin: 0.5rem auto;
+    text-align: center;
+
+    span {
+      background-color: $backMedia;
+      padding: 0.2rem;
+      color: white;
+      font-weight: bold;
+      border-radius: 1rem;
+
+      &:hover {
+        border: 2px solid $backMedia;
+        background-color: white;
+        color: $backMedia;
+
+      }
+
+      &:active {
+        border: 2px solid $backMedia;
+        background-color: white;
+        color: $backMedia;
+
+      }
+
+    }
+
+  }
+
+
+  h3 {
+    color: $mainColor;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 1rem auto;
+    height: 2rem;
+  }    
+  
+}

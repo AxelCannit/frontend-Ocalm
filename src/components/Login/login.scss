@@ -1,0 +1,306 @@
+ @import 'src/styles/vars';
+
+ @keyframes move {
+  0% {
+    border-radius: 34% 66% 46% 54% / 63% 88% 12% 37% ;
+  }
+  25% {
+    border-radius: 68% 32% 14% 86% / 21% 21% 79% 79%;
+  }
+  50% {
+    border-radius: 68% 32% 65% 35% / 21% 52% 48% 79%;
+  }
+  75% {
+    border-radius: 75% 25% 89% 11% / 69% 70% 30% 31% ;
+  }
+  100% {
+    border-radius: 34% 66% 46% 54% / 63% 88% 12% 37% ;
+  }
+}
+
+.login {
+  text-align: center;
+
+  .logo {
+    width: 60%;
+    margin-top: 2rem;
+    
+  }
+
+  .right-login{
+    width: 80%;
+    margin: auto;
+    animation-name: move;
+    animation-duration: 15s;
+    animation-iteration-count: infinite ;
+    background: linear-gradient(41deg, rgba(94,193,190,1) 0%, rgba(145,213,211,1) 47%, rgba(213,235,234,1) 100%);
+
+    h1 {
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: $darkerBlue;
+    }
+
+    form {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      margin: 2rem auto;
+      width: 80%;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      border-radius: 2rem;
+      
+      label {
+        color: $inputBlue;
+        text-align: left;
+        font-weight: bold;
+        width: 100%;
+
+      }
+
+      .input-login {
+        font-family: $quicksand;
+        padding: 0.5rem;
+        border-style: none;
+        margin-bottom: 0.5rem;
+
+        &:focus {
+          border: 2px solid $backMedia;
+          border-radius: 2rem;
+
+        }
+        
+        &::placeholder {
+          color: $mainBlue;
+
+        }
+
+      }
+
+      .submit {
+        margin: 1rem auto;
+        width: 60%;
+        border-style: none;
+        background: none;
+
+        .connect {
+          fill: $backMedia;
+          color: white;
+
+          &:hover {
+            fill: white;
+            color: $backMedia;
+  
+          }
+  
+          &:active {
+            fill: $backMedia;
+            color: white;
+            
+          }
+
+        }
+        
+      }
+    }
+  }
+  
+  .subscribe {
+    display: flex;
+    flex-direction: column;
+    
+    .question {
+      color: $darkerBlue;
+      font-size: 0.9rem;
+      font-style: italic;
+      margin-bottom: 1rem;
+
+    }
+
+    .new-account {
+      color: white;
+      font-family: $questrial;
+      font-size: 1.2rem;
+      background-color: $darkBlue;
+      border-radius: 0.5rem;
+      font-weight: bold;
+      padding: 0.5rem;
+      width: 40%;
+      margin: auto;
+
+      &:hover {
+        background-color:$backMedia;
+
+      }
+
+      &:active {
+        background-color:$backMedia;
+
+      }
+
+    }
+  }
+
+  .what {
+    display: block;
+    margin-top: 4.5rem;
+    margin-right: 1rem;
+    padding-top: 2.5rem;
+    background: linear-gradient(41deg, rgba(94,193,190,1) 0%, rgba(145,213,211,1) 47%, rgba(213,235,234,1) 100%);
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    margin-left: 18rem;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 2rem;
+
+    &:hover {
+      background: $darkBlue;
+
+    }
+
+    &:active {
+      background: $darkBlue;
+
+    }
+
+   }
+}
+
+@media screen and (min-width: 500px) {
+  .login {
+    .logo {
+      width: 30%;
+    }
+    .right-login {
+      form {
+        width: 65%;
+      }
+    }
+
+    .what {
+      margin-left: 22rem;
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .login {
+    .logo {
+      width: 30%;
+    }
+    .right-login {
+      form {
+        width: 60%;
+      }
+    }
+
+    .what {
+      margin-left: 30rem;
+
+    }
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .login {
+    .what {
+      margin-left: 35rem;
+    }
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .login {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .logo {
+      width: 50%;
+      margin: 20vh auto;
+      padding-right: 1rem;
+
+    }
+
+    .right-login {
+      margin: 20vh auto;
+      width: 50%;
+
+      form {
+        
+        .submit {
+            font-size: 0.8rem;
+            width: 85%;
+        }
+      }
+    }
+
+    .what {
+        margin-left: 45rem;
+        margin-top: -8rem;
+  
+     }
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .login {
+
+    .logo {
+      margin: 10vh auto;
+    }
+
+    .right-login {
+      width: 45%;
+    }
+
+    .what {
+      margin-left: 60rem;
+
+    }
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .login {
+
+    .logo {
+      width: 40%;
+    }
+
+    .right-login {
+      width: 40%;
+    }
+
+    .what {
+      margin-left: 78rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .login {
+
+    .logo {
+      width: 35%;
+    }
+
+    .right-login {
+      width: 35%;
+
+      form {
+        
+      }
+    }
+
+    .what {
+      margin-left: 92rem;
+      padding-top: 2rem;
+
+    }
+  }
+}
